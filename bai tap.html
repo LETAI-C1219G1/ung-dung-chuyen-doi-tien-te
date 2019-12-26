@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function clickConvert() {
+            let select1=document.getElementById("select1").value;
+            let select2=document.getElementById("select2").value;
+            let amount=document.getElementById("amount").value;
+            let usd=amount/23000;
+            let vnd=amount*23000;
+            if (select1 === "vietnam" && select2 === "usd"){
+            document.getElementById("result").innerHTML="Result : "+usd+ "USD";
+            }else if(select1==="usd" && select2 === "vietnam"){
+                document.getElementById("result").innerHTML ="Result :  "+vnd+"VND";
+            }}
+    </script>
+</head>
+<h2>Amount</h2>
+<input type="text" value="" id="amount"  >
+<h2>From Currency</h2>
+<select name="fromCurrency" id="select1">
+    <option value="vietnam">Viet nam</option>
+    <option value="usd">USD</option>
+</select>
+<h2>To currency</h2>
+<select name="toCurrency" id="select2">
+    <option value="usd">USD</option>
+    <option value="vietnam">Viet nam</option>
+</select><br><br>
+<input type="button" value="Chance"  onclick="clickConvert()" id="value">
+<h2 id="result"></h2>
+</body>
+</html>
